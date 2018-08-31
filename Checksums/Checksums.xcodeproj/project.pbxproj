@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		278385002123D18000064D62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 278384FF2123D18000064D62 /* AppDelegate.m */; };
+		278385032123D18000064D62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 278385022123D18000064D62 /* main.m */; };
+		278385062123D18000064D62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278385052123D18000064D62 /* ViewController.m */; };
+		278385082123D18000064D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 278385072123D18000064D62 /* Assets.xcassets */; };
+		2783850B2123D18000064D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278385092123D18000064D62 /* Main.storyboard */; };
+		278385142123D44500064D62 /* CheckSums_16.png in Resources */ = {isa = PBXBuildFile; fileRef = 278385132123D44500064D62 /* CheckSums_16.png */; };
+		2783851F2123D53900064D62 /* FinderSync.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2783851E2123D53900064D62 /* FinderSync.mm */; };
+		278385242123D53900064D62 /* Checksums Finder Integration.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 278385192123D53900064D62 /* Checksums Finder Integration.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2783852A2123D58D00064D62 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278385292123D58D00064D62 /* AppKit.framework */; };
+		2783852C2123D59700064D62 /* FinderSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2783852B2123D59700064D62 /* FinderSync.framework */; };
+		278385442123DADF00064D62 /* libCrypt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278385432123DADF00064D62 /* libCrypt.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		278385212123D53900064D62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 278384F32123D18000064D62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 278385182123D53900064D62;
+			remoteInfo = "CheckSums Finder Integration";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		278385232123D53900064D62 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				278385242123D53900064D62 /* Checksums Finder Integration.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		278384FB2123D18000064D62 /* Checksums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checksums.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		278384FE2123D18000064D62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		278384FF2123D18000064D62 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		278385022123D18000064D62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		278385042123D18000064D62 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		278385052123D18000064D62 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		278385072123D18000064D62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2783850A2123D18000064D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2783850C2123D18000064D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		278385132123D44500064D62 /* CheckSums_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CheckSums_16.png; path = Images/CheckSums_16.png; sourceTree = "<group>"; };
+		278385192123D53900064D62 /* Checksums Finder Integration.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Checksums Finder Integration.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2783851C2123D53900064D62 /* CheckSums_Finder_Integration.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CheckSums_Finder_Integration.entitlements; sourceTree = "<group>"; };
+		2783851D2123D53900064D62 /* FinderSync.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FinderSync.hpp; sourceTree = "<group>"; };
+		2783851E2123D53900064D62 /* FinderSync.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FinderSync.mm; sourceTree = "<group>"; };
+		278385202123D53900064D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		278385292123D58D00064D62 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2783852B2123D59700064D62 /* FinderSync.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FinderSync.framework; path = System/Library/Frameworks/FinderSync.framework; sourceTree = SDKROOT; };
+		278385432123DADF00064D62 /* libCrypt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCrypt.a; path = ../Crypt/build/Debug/libCrypt.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		278384F82123D18000064D62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278385162123D53900064D62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278385442123DADF00064D62 /* libCrypt.a in Frameworks */,
+				2783852C2123D59700064D62 /* FinderSync.framework in Frameworks */,
+				2783852A2123D58D00064D62 /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		278384F22123D18000064D62 = {
+			isa = PBXGroup;
+			children = (
+				278384FD2123D18000064D62 /* Checksums */,
+				2783851A2123D53900064D62 /* Checksums Finder Integration */,
+				278384FC2123D18000064D62 /* Products */,
+				278385282123D58D00064D62 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		278384FC2123D18000064D62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				278384FB2123D18000064D62 /* Checksums.app */,
+				278385192123D53900064D62 /* Checksums Finder Integration.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		278384FD2123D18000064D62 /* Checksums */ = {
+			isa = PBXGroup;
+			children = (
+				278385122123D42300064D62 /* Resources */,
+				278384FE2123D18000064D62 /* AppDelegate.h */,
+				278384FF2123D18000064D62 /* AppDelegate.m */,
+				278385042123D18000064D62 /* ViewController.h */,
+				278385052123D18000064D62 /* ViewController.m */,
+				278385072123D18000064D62 /* Assets.xcassets */,
+				278385092123D18000064D62 /* Main.storyboard */,
+				2783850C2123D18000064D62 /* Info.plist */,
+				278385012123D18000064D62 /* Supporting Files */,
+			);
+			name = Checksums;
+			path = CheckSums;
+			sourceTree = "<group>";
+		};
+		278385012123D18000064D62 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				278385022123D18000064D62 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		278385122123D42300064D62 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				278385132123D44500064D62 /* CheckSums_16.png */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		2783851A2123D53900064D62 /* Checksums Finder Integration */ = {
+			isa = PBXGroup;
+			children = (
+				2783851D2123D53900064D62 /* FinderSync.hpp */,
+				2783851E2123D53900064D62 /* FinderSync.mm */,
+				278385202123D53900064D62 /* Info.plist */,
+				2783851B2123D53900064D62 /* Supporting Files */,
+			);
+			name = "Checksums Finder Integration";
+			path = "CheckSums Finder Integration";
+			sourceTree = "<group>";
+		};
+		2783851B2123D53900064D62 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2783851C2123D53900064D62 /* CheckSums_Finder_Integration.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		278385282123D58D00064D62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				278385432123DADF00064D62 /* libCrypt.a */,
+				2783852B2123D59700064D62 /* FinderSync.framework */,
+				278385292123D58D00064D62 /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		278384FA2123D18000064D62 /* Checksums */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2783850F2123D18000064D62 /* Build configuration list for PBXNativeTarget "Checksums" */;
+			buildPhases = (
+				278384F72123D18000064D62 /* Sources */,
+				278384F82123D18000064D62 /* Frameworks */,
+				278384F92123D18000064D62 /* Resources */,
+				278385232123D53900064D62 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				278385222123D53900064D62 /* PBXTargetDependency */,
+			);
+			name = Checksums;
+			productName = CheckSums;
+			productReference = 278384FB2123D18000064D62 /* Checksums.app */;
+			productType = "com.apple.product-type.application";
+		};
+		278385182123D53900064D62 /* Checksums Finder Integration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 278385252123D53900064D62 /* Build configuration list for PBXNativeTarget "Checksums Finder Integration" */;
+			buildPhases = (
+				278385152123D53900064D62 /* Sources */,
+				278385162123D53900064D62 /* Frameworks */,
+				278385172123D53900064D62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Checksums Finder Integration";
+			productName = "CheckSums Finder Integration";
+			productReference = 278385192123D53900064D62 /* Checksums Finder Integration.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		278384F32123D18000064D62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Mahesh B Vattigunta";
+				TargetAttributes = {
+					278384FA2123D18000064D62 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = UM3ZD27Z39;
+						ProvisioningStyle = Automatic;
+					};
+					278385182123D53900064D62 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = UM3ZD27Z39;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 278384F62123D18000064D62 /* Build configuration list for PBXProject "Checksums" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 278384F22123D18000064D62;
+			productRefGroup = 278384FC2123D18000064D62 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				278384FA2123D18000064D62 /* Checksums */,
+				278385182123D53900064D62 /* Checksums Finder Integration */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		278384F92123D18000064D62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278385082123D18000064D62 /* Assets.xcassets in Resources */,
+				2783850B2123D18000064D62 /* Main.storyboard in Resources */,
+				278385142123D44500064D62 /* CheckSums_16.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278385172123D53900064D62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		278384F72123D18000064D62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278385062123D18000064D62 /* ViewController.m in Sources */,
+				278385032123D18000064D62 /* main.m in Sources */,
+				278385002123D18000064D62 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		278385152123D53900064D62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2783851F2123D53900064D62 /* FinderSync.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		278385222123D53900064D62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 278385182123D53900064D62 /* Checksums Finder Integration */;
+			targetProxy = 278385212123D53900064D62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		278385092123D18000064D62 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2783850A2123D18000064D62 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2783850D2123D18000064D62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2783850E2123D18000064D62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		278385102123D18000064D62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = UM3ZD27Z39;
+				INFOPLIST_FILE = CheckSums/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MoonStone.CheckSums;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		278385112123D18000064D62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = UM3ZD27Z39;
+				INFOPLIST_FILE = CheckSums/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MoonStone.CheckSums;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		278385262123D53900064D62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "CheckSums Finder Integration/CheckSums_Finder_Integration.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = UM3ZD27Z39;
+				HEADER_SEARCH_PATHS = ../Crypt;
+				INFOPLIST_FILE = "CheckSums Finder Integration/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				OTHER_LDFLAGS = ../openssl/lib/libcrypto.a;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MoonStone.CheckSums.CheckSums-Finder-Integration";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		278385272123D53900064D62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "CheckSums Finder Integration/CheckSums_Finder_Integration.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = UM3ZD27Z39;
+				HEADER_SEARCH_PATHS = ../Crypt;
+				INFOPLIST_FILE = "CheckSums Finder Integration/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				OTHER_LDFLAGS = ../openssl/lib/libcrypto.a;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MoonStone.CheckSums.CheckSums-Finder-Integration";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		278384F62123D18000064D62 /* Build configuration list for PBXProject "Checksums" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2783850D2123D18000064D62 /* Debug */,
+				2783850E2123D18000064D62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2783850F2123D18000064D62 /* Build configuration list for PBXNativeTarget "Checksums" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278385102123D18000064D62 /* Debug */,
+				278385112123D18000064D62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		278385252123D53900064D62 /* Build configuration list for PBXNativeTarget "Checksums Finder Integration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278385262123D53900064D62 /* Debug */,
+				278385272123D53900064D62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 278384F32123D18000064D62 /* Project object */;
+}
