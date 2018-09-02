@@ -9,21 +9,37 @@
 #include <sstream>
 #include <fstream>
 #include <iomanip>
-
 #include "Hash.hpp"
 #include "openssl/evp.h"
 
-bool HashFile(const char* fileName,
+/*************************************************************************
+ *
+ * HashFile
+ *
+ * Description:
+ *   Compute checksums of the file (SHA-1, SHA-256, MD5)
+ *
+ * Arguments:
+ *   const char* szFileName  - Absolute path of the file
+ *   CheckSumMap& rCheckSums - Map of checksum algorithm and its value
+ *                             (SHA-1, SHA-256, MD5)
+ *
+ * Return value:
+ *   true - if all checksums are computed successfully
+ *   false - if failed to computed any checksum
+ *
+ *************************************************************************/
+bool HashFile(const char* szFileName,
               CheckSumMap& rCheckSums)
 {
     rCheckSums.clear();
-    if (nullptr == fileName)
+    if (nullptr == szFileName)
     {
         return false;
     }
     
     // Step 1: Read the file content
-    std::ifstream in(fileName, std::ios::in | std::ios::binary);
+    std::ifstream in(szFileName, std::ios::in | std::ios::binary);
     in.seekg(0, std::ios::end);
     
     size_t size = in.tellg();
@@ -33,9 +49,11 @@ bool HashFile(const char* fileName,
     in.read(data, size);
     
     // Step 2: Calculte hash
-    bool bStatus = false;   // Until proven otherwise
+    bool bStatus = false;
     for (size_t i = 0; i < CHECKSUM_TYPE_COUNT; ++i)
     {
+        // reset bStatus each time at the beginning of the loop
+        bStatus = false;
         const EVP_MD *type = nullptr;
         switch (i)
         {
@@ -99,9 +117,6 @@ bool HashFile(const char* fileName,
             rCheckSums.clear();
             break;
         }
-        
-        // reset bStatus
-        bStatus = false;
     }
     
     if (NULL != data)
@@ -113,6 +128,20 @@ bool HashFile(const char* fileName,
     return bStatus;
 }
 
+/*************************************************************************
+ *
+ * GetCheckSumTypeStr
+ *
+ * Description:
+ *   Helper function which returns name of checksum string
+ *
+ * Arguments:
+ *   CheckSumType eType  - ENUM of checksum type
+ *
+ * Return value:
+ *   Name of the checksum string
+ *
+ *************************************************************************/
 std::string GetCheckSumTypeStr(CheckSumType eType)
 {
     switch(eType)
