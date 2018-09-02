@@ -32,7 +32,7 @@
         self.myFolderURL = [NSURL fileURLWithPath:[NSString stringWithUTF8String:pw->pw_dir]];
         [FIFinderSyncController defaultController].directoryURLs = [NSSet setWithObject:self.myFolderURL];
     }
-
+    
     return self;
 }
 
@@ -48,7 +48,6 @@
 }
 
 - (NSMenu *)menuForMenuKind:(FIMenuKind)whichMenu {
-    
     NSArray *items = [[FIFinderSyncController defaultController] selectedItemURLs];
     
     // Keep things simple. Selection of multiple items not allowed.
@@ -67,7 +66,14 @@
         return NULL;
     }
     
-    // Now, the actual work starts.
+    // Compute checksums for the file selected and performed right-click action.
+    const char* fileName = [item fileSystemRepresentation];
+    CheckSumMap checkSums;
+    if (!HashFile(fileName, checkSums))
+    {
+        return NULL;
+    }
+    
     // Produce a menu for the extension.
     NSMenu *contextMenu = [[NSMenu alloc] initWithTitle:@"Contextmenu"];
     NSMenuItem *subMenuItem = [[NSMenuItem alloc] init];
@@ -75,10 +81,6 @@
     
     NSMenu *subMenu = [[NSMenu alloc] initWithTitle:@"Checksums"];
     [subMenuItem setTitle:[subMenu title]];
-    
-    const char* fileName = [item fileSystemRepresentation];
-    CheckSumMap checkSums;
-    HashFile(fileName, checkSums);
     
     // Creates the menu entries.
     for (std::pair<CheckSumType, std::string> element : checkSums)
@@ -88,21 +90,11 @@
         NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle:menuTitle action:@selector(copyCheckSum:) keyEquivalent:@""];
         [subMenu addItem:menuItem];
     }
-   
+    
     [subMenuItem setSubmenu:subMenu];
     [contextMenu addItem:subMenuItem];
-
-    return contextMenu;
-}
-
-- (IBAction)sampleAction:(id)sender {
-    NSURL* target = [[FIFinderSyncController defaultController] targetedURL];
-    NSArray* items = [[FIFinderSyncController defaultController] selectedItemURLs];
     
-    NSLog(@"sampleAction: menu item: %@, target = %@, items = ", [sender title], [target filePathURL]);
-    [items enumerateObjectsUsingBlock: ^(id obj, NSUInteger idx, BOOL *stop) {
-        NSLog(@"    %@", [obj filePathURL]);
-    }];
+    return contextMenu;
 }
 
 - (IBAction)copyCheckSum:(NSMenuItem* )sender {
@@ -111,7 +103,6 @@
 }
 
 - (IBAction)copyAllCheckSums:(NSMenuItem* )sender {
-
     if ([sender hasSubmenu])
     {
         // BUGBUG : Does not come here even if the contextual menu item has submenu
@@ -124,4 +115,3 @@
     }
 }
 @end
-
