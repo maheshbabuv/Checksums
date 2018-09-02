@@ -21,10 +21,9 @@ enum CheckSumType {
 
 typedef std::map<CheckSumType, std::string> CheckSumMap;
 
-bool HashFile(const char* fileName,
+bool HashFile(const char* szFileName,
               CheckSumMap& rCheckSums);
 
 std::string GetCheckSumTypeStr(CheckSumType eType);
-
 
 #endif /* Hash_hpp */

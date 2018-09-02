@@ -139,7 +139,7 @@ bool HashFile(const char* szFileName,
  *   CheckSumType eType  - ENUM of checksum type
  *
  * Return value:
- *   Name of the checksum string
+ *   std::string - Name of the checksum string
  *
  *************************************************************************/
 std::string GetCheckSumTypeStr(CheckSumType eType)
